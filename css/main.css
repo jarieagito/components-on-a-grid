@@ -10,7 +10,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-family: 'Patua One', sans-serif;
+  font-family: "Patua One", sans-serif;
   background-color: #f2f1ed;
   line-height: 1.5;
 }
@@ -28,6 +28,7 @@ img {
 }
 
 header {
+  display: contents;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -38,14 +39,36 @@ header img {
   grid-row: 1 / -1;
 }
 
-ul {
-  text-decoration: none;
-  list-style-type: none;
-}
-
 h1 {
   grid-column: 1;
   grid-row: 3;
+  z-index: 1;
+  max-width: 14rem;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+a {
+  color: #fff;
+}
+
+header nav {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   z-index: 1;
 }
 
