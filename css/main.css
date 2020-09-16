@@ -17,6 +17,10 @@ html {
 
 body {
   margin: 0;
+  display: grid;
+  grid-template-areas:
+    "first"
+    "second"
 }
 
 *, *::before, *::after {
@@ -32,6 +36,9 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  margin: 1rem;
+  margin-bottom: 0;
+  grid-area: first;
 }
 
 header img {
@@ -43,7 +50,7 @@ h1 {
   grid-column: 1;
   grid-row: 3;
   z-index: 1;
-  max-width: 14rem;
+  width: 14rem;
 }
 
 ul {
@@ -53,11 +60,11 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
+  padding-right: 2rem;
 }
 
 li {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   padding-bottom: 1rem;
   font-size: 2rem;
 }
@@ -72,6 +79,22 @@ header nav {
   z-index: 1;
 }
 
+main {
+  display: flex;
+  grid-area: second;
+}
+
 h2 {
   color: #30658d;
+  margin-bottom: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 1rem;
+
+}
+
+p {
+  margin-top: 0;
 }
